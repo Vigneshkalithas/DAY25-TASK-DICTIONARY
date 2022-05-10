@@ -1,0 +1,52 @@
+:root {
+  --main: rgb(35, 53, 214);
+  --colorize: linear-gradient(90deg, rgba(150,48,30,1) 0%,rgba(199,201,88,1) 10%,rgba(28,147,46,1) 20%,rgba(74,165,168,1) 30%,rgba(89,90,165,1) 40%,rgba(84,16,67,1) 50%,rgba(28,58,63,1) 60%,rgba(82,175,183,1) 70%,rgba(78,170,76,1) 80%,rgba(150,48,30,1) 90%,rgba(199,201,88,1) 100%);
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  /* overflow-x: hidden;
+  overflow-y: hidden;
+  box-sizing:border-box; */
+  font-family:Rubik,sans-serif
+
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:url(https://maxst.icons8.com/vue-static/landings/page-index/hero-gradient.jpg);
+  background-repeat: no-repeat;
+}
+.search-icon{
+  width: 19px;
+  height: 19px;
+}
+.title{
+  /* display:block; */
+  text-decoration:none;
+  cursor:pointer;
+  color:#000;animation:background 10s linear infinite;
+  background:var(--colorize);
+  background-size:1000% 100%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-weight:500;
+  padding:.6rem 1rem;
+  border-radius:.2rem;
+  margin-top:2rem;
+  transition:.4s all
+}.title:hover{
+  transform:scale(1.1)
+}
+
+@keyframes background{
+  0%{background-position:0 50%}
+  100%{background-position:100% 50%}
+}
+#errorMsg{
+  padding-top: 10px;
+  color: red;
+}
